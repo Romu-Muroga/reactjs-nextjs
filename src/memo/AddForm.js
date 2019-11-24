@@ -30,8 +30,8 @@ class AddForm extends Component {
 
   doAction(e){
     e.preventDefault();
-    let action = addMemo(this.state.message);
-    this.props.dispatch(action);
+    let action = addMemo(this.state.message); //addMemoアクションクリエーターでアクションを作成
+    this.props.dispatch(action); //ストアのレデューサーにtype:'ADD'のアクションが送られる
     this.setState({message: ''});
   }
 

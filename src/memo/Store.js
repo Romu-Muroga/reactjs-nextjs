@@ -1,8 +1,8 @@
 import { createStore } from 'redux';
 
 const initData = {
-  data:[{message: 'sample data', created: new Date()}],
-  message: 'please type message',
+  data: [{message: 'sample data', created: new Date()}],
+  message: 'please type message:',
   mode: 'default',
   fdata: []
 };
@@ -47,14 +47,14 @@ function findReduce(state, action){
   let f = action.find;
   let fdata = [];
   state.data.forEach((value) => {
-    if (value.message.indexof(f) <= 0){
+    if (value.message.indexOf(f) >= 0){
       fdata.push(value);
     }
   });
   return {
     data: state.data,
     message: 'find "' + f + '":',
-    mode: 'find' ,
+    mode: 'find',
     fdata: fdata
   };
 }
@@ -76,7 +76,7 @@ function deleteReduce(state, action){
 // メモ追加のアクション
 export function addMemo(text) {
   return {
-    type: 'Add',
+    type: 'ADD',
     message: text
   }
 }

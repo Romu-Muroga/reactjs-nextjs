@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { threadId } from 'worker_threads';
 
 class Item extends Component {
   th = {

@@ -37,7 +37,7 @@ class DelForm extends Component {
 
   render(){
     let n = 0;
-    let item = this.props.data.map((value) => (
+    let items = this.props.data.map((value) => (
       <option key={n} value={n++}>{value.message.substring(0,10)}</option>
     ));
     return (
